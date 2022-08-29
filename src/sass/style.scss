@@ -1,7 +1,18 @@
-@import 'base/variables';
+@import 'base/_variabless';
 
 * {
-	font-family: 'Museo Sans Cyrl' sans-serif;
+	font-family: 'MuseoSansCyrl' sans-serif;
+}
+
+a {
+	color: #8d8176;
+	text-decoration: none;
+}
+
+html,body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
 }
 
 .container {
@@ -9,7 +20,6 @@
 	margin: 0 auto;
 }
 
-h1 {
-	color: red;
-	padding: auto;
-}
+@import 'blocks/promo';
+@import 'blocks/header';
+@import 'blocks/button';
