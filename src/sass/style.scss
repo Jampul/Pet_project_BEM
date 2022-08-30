@@ -1,8 +1,8 @@
 @import 'base/_variabless';
 
-* {
-	font-family: 'MuseoSansCyrl' sans-serif;
-}
+/* * {
+	font-family: 'Museo Sans Curl'
+} */
 
 a {
 	color: #8d8176;
@@ -13,6 +13,7 @@ html,body{
     padding: 0;
     margin: 0;
     height: 100%;
+	font-family: 'Museo Sans Cyrl';
 }
 
 .container {
@@ -23,3 +24,6 @@ html,body{
 @import 'blocks/promo';
 @import 'blocks/header';
 @import 'blocks/button';
+@import'blocks/benefits';
+@import 'blocks/titles';
+
