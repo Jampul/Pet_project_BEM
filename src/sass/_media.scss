@@ -1,0 +1,52 @@
+@media (max-width: 1200px) {
+   .promo {
+        &__header {
+            font-size: 37px;
+        }
+        &__subheader {
+            font-size: 18px;
+        }
+   } 
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 0 15px;
+        &__logo {
+            img {
+                width: 80%;
+            }
+        }
+        &__phone {
+            font-size: 15px;
+        }
+        button {
+            width: 135px;
+            height: 30px;
+            font-size: 11px;
+        }
+    }
+    .promo {
+        &__wrapper {
+            padding: 0 20px;
+            margin-top: 79px;
+        }
+        &__header {
+            font-size: 33px;
+        }
+        &__subheader {
+            font-size: 16px;
+            margin: 0;
+        }
+        &__icons {
+            margin-top: 55px;
+            width: 360px;
+        }
+        &__icon {
+            width: 92px;
+            img {
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
