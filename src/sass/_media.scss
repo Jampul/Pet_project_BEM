@@ -49,4 +49,76 @@
             }
         }
     }
+    .benefits {
+        .titles {
+            &_benefits {
+                font-size: 26px;
+            }
+        }
+        &__subtitle {
+            font-size: 16px;
+        }
+        &__descr {
+            width: 249px;
+            font-size: 13px;
+        }
+    }
+}
+@media (max-width: 767px) {
+    header {
+        .header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0 10px;
+            &__logo {
+                width: 185px;
+            }
+            &__official {
+                text-align: center;
+                font-size: 11px;
+                span {
+                    font-size: 13px;
+                }
+            }
+            &__contacts {
+                margin-left: 19px;
+            }
+            &__phone {
+                font-size: 13px;
+            }
+            
+        }
+    }
+    .promo {
+        background: url(../img/bg/main_mobile_bg.jpg) center (center/cover) no-repeat;
+        &__wrapper {
+            display: flex;
+            align-items: center;
+        }
+        &__link {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            a {
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+            }
+        }
+    }
+    .benefits {
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__item {
+            width: 425px;
+            margin-top: 50px;
+        }
+        &__subtitle {
+            margin-top: 20px;
+        }
+    }
 }
