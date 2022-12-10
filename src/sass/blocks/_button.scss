@@ -8,6 +8,7 @@
     font-size: 12px;
     text-transform: uppercase;
     color: #FFFFFF;
+    cursor: pointer;
     &_main {
         width: 303px;
         height: 54px;
@@ -21,5 +22,11 @@
         height: 58px;
         color:#FFFFFF;
         font-size: 16px;
+    }
+    &_mini {
+        width: 135px;
+        height: 44px;
+        font-size: 14px;
+        font-weight: 500;
     }
 }

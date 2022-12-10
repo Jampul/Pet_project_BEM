@@ -79,6 +79,64 @@
             padding: 0 15px;
         }
     }
+    .carousel {
+        padding: 50px 0;
+        &__inner {
+            max-width: 100%;
+        }
+    }
+    .catalog {
+        &__tab {
+            width: 197px;
+            height: 48px;
+        }
+        &__content {
+            margin-top: 40px;
+            padding: 0 15px;
+        }
+        &-item {
+            width: 198px;
+            max-height: 415px;
+            &__img {
+                height: 170px;
+            }
+            &__subtitle {
+                font-size: 15px;
+            }
+            &__descr {
+                font-size: 12px;
+                line-height: 17px;
+            }
+            hr {
+                margin-top: 5px;
+                margin-bottom: 13px;
+            }
+            &__old-price {
+                font-size: 13px;
+            }
+            &__new-price {
+                font-size: 18px;
+            }
+            .button_mini {
+                width: 102px;
+                height: 42px;
+
+            }
+            &__content {
+                width: 50%;
+            }
+            &__list {
+                padding: 0 0 0 5px;
+                li {
+                    font-size: 13px;
+                    line-height: 18px;
+                }
+            }
+            &__back {
+                transform: translateX(calc(-50% - 9px));
+            }
+        }
+    }
 }
 @media (max-width: 767px) {
     header {
