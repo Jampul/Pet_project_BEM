@@ -81,6 +81,7 @@ $(document).ready(function(){
             email: "Ваша почта має бути формату name@domain.com"
             }
         }
+        // i dont know, what happend
     });
     $('#order form').validate();
 
