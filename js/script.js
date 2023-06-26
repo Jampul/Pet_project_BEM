@@ -51,39 +51,42 @@ $(document).ready(function(){
         })
     });
 
-    $('#consultation-form').validate();
-    $('#consultation form').validate({
-        rules: {
-            name: {
-                required: true,
-                minlenght: 2
+    function validateForms(form){
+        $(form).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlenght: 2
+                },
+                phone: {
+                    required: true,
+                    phone: true
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
             },
-            phone: {
-                required: true,
-                phone: true
-            },
-            email: {
-                required: true,
-                email: true
-            },
-        },
-        messages: {
-            name: {
-                require: "Будь-ласка введіть ім'я",
-                minlength: jQuery.validator.format("Введіть більше {0} символів!")
-            },
-            phone: {
-                required: "Введіть свій номер телефону",
-                phone: "Введіть свій справжній номер"
-            },
-            email: {
-            required: "Введіть свою єлектрону почту",
-            email: "Ваша почта має бути формату name@domain.com"
+            messages: {
+                name: {
+                    require: "Будь-ласка введіть ім'я",
+                    minlength: jQuery.validator.format("Введіть більше {0} символів!")
+                },
+                phone: {
+                    required: "Введіть свій номер телефону",
+                    phone: "Введіть свій справжній номер"
+                },
+                email: {
+                required: "Введіть свою єлектрону почту",
+                email: "Ваша почта має бути формату name@domain.com"
+                }
             }
-        }
-        // i dont know, what happend
-    });
-    $('#order form').validate();
+        });
+    };
+
+    validateForms('#consultation-form');
+    validateForms('#consultation form');
+    validateForms('#order form');
 
 });
   
