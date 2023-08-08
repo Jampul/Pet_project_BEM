@@ -51,40 +51,34 @@ $(document).ready(function(){
         })
     });
 
-    $('#consultation-form form').validate();
-    
-    $('#order form').validate();
-
-    function validateForms(Form){
-        $(Form).validate({
+    function validateForms(form){
+        $(form).validate({
             rules: {
                 name: {
                     required: true,
-                    minlength: 2,
-                    maxlength: 12,
+                    minlenght: 2
                 },
                 phone: {
                     required: true,
-                    maxlength: 14,
-                    minlength: 10,
+                    phone: true
                 },
                 email: {
                     required: true,
                     email: true
-                }
+                },
             },
             messages: {
                 name: {
-                    required: "Введіть ваше ім'я",
-                    minlength: jQuery.validator.format("Введіть більше {0} символів")
+                    require: "Будь-ласка введіть ім'я",
+                    minlength: jQuery.validator.format("Введіть більше {0} символів!")
                 },
                 phone: {
-                    required: "Введіть ваш номер телефону",
-                    minlength: jQuery.validator.format("Не коректний номер")
+                    required: "Введіть свій номер телефону",
+                    phone: "Введіть свій справжній номер"
                 },
                 email: {
-                    required: "Введіть вашу пошту",
-                    email: "Не коректна пошта"
+                required: "Введіть свою єлектрону почту",
+                email: "Ваша почта має бути формату name@domain.com"
                 }
             }
         });
@@ -94,7 +88,36 @@ $(document).ready(function(){
     validateForms('#consultation form');
     validateForms('#order form');
 
-    
+    $('input[name=phone]').mask("+38 (099) 999-9999");
+
+    $('form').submit(function(e) {
+        e.preventDefault();
+
+        if(!$(this).valid()) {
+            return;
+        }
+         
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+            $('#consultation, #order').fadeOut();
+            $('.overlay, #thanks').fadeIn('slow');
+
+            $('form').trigger('reset');
+        });
+        return false;
+    });
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1600) {
+            $('.pageup').fadeIn();
+        } else {
+            $('.pageup').fadeOut();
+        }
+    });
 });
   
 

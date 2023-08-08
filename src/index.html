@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="CSS/style.min.css">
 </head>
 <body>
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
@@ -107,7 +107,7 @@
 
             <form id="consultation-form" class="feed-form" action="#">
                 <input name="name" placeholder="Ваше ім'я" type="text">
-                <input name="phone" placeholder="Ваш телефон" type="number">
+                <input name="phone" placeholder="Ваш телефон">
                 <input name="email" placeholder="Ваш E-mail" type="email">
 
                 <button class="button button_submit">Замовити КОНСУЛЬТАЦІЮ</button>
@@ -528,7 +528,7 @@
             <div class="modal__descr">і ми передзвонимо вам протягом 10 хвилин</div>
             <form class="feed-form feed-form_mt25" action="#">
                 <input name="name" placeholder="Ваше ім'я" type="text">
-                <input name="phone" placeholder="Ваш телефон" type="number">
+                <input name="phone" placeholder="Ваш телефон">
                 <input name="email"  placeholder="Ваш E-mail" type="email">
 
                 <button class="button button_submit">Замовити КОНСУЛЬТАЦІЮ</button>
@@ -541,7 +541,7 @@
             <div class="modal__descr">Пульсометр Polar FT1</div>
             <form class="feed-form feed-form_mt25" action="#">
                 <input name="name" placeholder="Ваше ім'я" type="text">
-                <input name="phone" placeholder="Ваш телефон" type="number">
+                <input name="phone" placeholder="Ваш телефон">
                 <input name="email" placeholder="Ваш E-mail" type="email">
 
                 <button class="button button_submit">Придбати</button>
@@ -554,13 +554,18 @@
             <div class="modal__descr">Наш менеджер зв'яжеться з вами найближчим часом!</div>
         </div>
     </div>
-    
+
+    <a href="#up" class="pageup">
+        <img src="icons/up.svg" alt="up" >
+    </a>
+
     <!-- Исправленние ошибок с гитом -->
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
